@@ -3,13 +3,21 @@ function startGame(){
     setInterval(timer, 1000);
     reset();
 }
-
+var checkmark = document.getElementById("checkmark");
+var wrong = document.getElementById("wrong");
 var correct = document.getElementById("correct");
 var correctInt = 0
 function checkColor(color, correctAnswer){
-    if(color==correctAnswer){
+    if(color===correctAnswer){
         correctInt++;
+        checkmark.classList.add("fadeAway");
+    }else{
+        wrong.classList.add("fadeAway");
     }
+    setTimeout(function(){
+        checkmark.classList.remove("fadeAway");
+        wrong.classList.remove("fadeAway");
+    },500);
     reset();
     correct.innerHTML = correctInt;
 }

@@ -66,3 +66,33 @@ body{
     width: 300px;
     font: 3rem sans-serif; 
 }
+#correct{
+    position: relative;
+    color: lawngreen;
+    text-shadow: 0px 0px 10px black;
+    font: 3rem sans-serif; 
+}
+#checkmark, #wrong{
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    top: 10%;
+    opacity: 0;
+}
+@media only screen and (max-width: 600px){
+    #checkmark, #wrong{
+        position: absolute;
+        width: 50%;
+        left: 25%;
+        top: 10%;
+    }
+}
+
+.fadeAway{
+    animation: fadeAway 500ms;
+}
+@keyframes fadeAway{
+    0%{opacity: 1}
+    50%{opacity: 1}
+    100%{opacity: 0}
+}
