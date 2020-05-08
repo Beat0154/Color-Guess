@@ -51,7 +51,7 @@ function addClick(color, correctAnswer){
     colorSpan.setAttribute("onclick", onclick);
 }
 
-var countdown = 10;
+var countdown = 30;
 function timer(){
     document.getElementById("time").innerHTML = countdown;
     if(countdown==0){
